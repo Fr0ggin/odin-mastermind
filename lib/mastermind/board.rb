@@ -13,11 +13,10 @@ class Board
   }
 
   def create_key
-    @key = []
     @key = 4.times.map { rand(0..5) }
   end
 
-  def show_code
+  def show_code(code)
     print code
   end
 
@@ -35,12 +34,10 @@ class Board
   end
 end
 
-# create key
-# show_key
-# show_code_as_colors
 # parse the guess
 #     check if right
 #         if no
 #             return the red and white pins (how good is the guess)
 #         if yes return correct
+#
 #

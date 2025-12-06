@@ -8,14 +8,17 @@ class Game
     puts 'Enter your guess'
     loop do
       guess = gets.chomp.split('')
-      if guess.length == 4 && guess.all? do |v|
-        ALLOWED_INPUT.include?(v)
-      end
-        return guess
+      if guess.length == 4 &&
+         guess.all? { |v| ALLOWED_INPUT.include?(v) }
+        return guess.map { |a| Board::COLORS.key(a) }
       end
 
       puts 'Invalid unput, pick 4 pins'
     end
+  end
+
+  def victory?(key, guess)
+    key == guess
   end
 end
 

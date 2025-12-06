@@ -9,41 +9,6 @@ Mastermind colors
 1 -> yellow
 2 -> green
 3 -> blue
-4 -> black 
+4 -> purple
 5 -> white
-
-Class Players
-    initialize
-    # wins
-    # losses
-    # solver
-    # code_creator
-
-Class Code
-    create_code
-    create random number (between 0-1) and * 5555 (round up)
-
-
-Class Board
-    show_code
-    show_code_as_colors
-    parse the guess
-        check if right
-            if no
-                return the red and white pins (how good is the guess)
-    count turns
-
-Class Game
-    create_code
-        -> debug show code for easier debug
-    guess
-
-Class Play
-    create player
-    create computer
-    loop do
-        (later on ask create, or crack)
-        game
-        update score
-        restart?
  -->

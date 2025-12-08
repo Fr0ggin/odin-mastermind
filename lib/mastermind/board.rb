@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-# Board fulfills evrything needed to keep track of during a game
+# Board fulfills everything needed to keep track of during a game
 # concerning the board, like code, guesses and so on
 class Board
   @colors = {
@@ -21,12 +21,14 @@ class Board
   end
 
   def puts_color_table
+    # cSpell:disable
     puts '0 -> (R)ed'
     puts '1 -> (Y)ellow'
     puts '2 -> (G)reen'
     puts '3 -> (B)lue'
     puts '4 -> (P)urple'
     puts '5 -> (W)hite'
+    # cSpell:enable
   end
 
   def show_code_as_colors(code)

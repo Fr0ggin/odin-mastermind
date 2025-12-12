@@ -2,6 +2,7 @@
 
 # Game fulfills all methods needed for running the game
 class Game
+  extend(ColorCodeDisplay)
   ALLOWED_INPUT = %w[R Y G B P W].freeze
 
   # check if victory is achieved
@@ -20,7 +21,7 @@ class Game
       guess = gets.chomp.split('')
       if guess.length == 4 &&
          guess.all? { |v| ALLOWED_INPUT.include?(v) }
-        return guess.map { |a| Board::COLORS.key(a) }
+        return guess.map { |a| COLORS.key(a) }
       end
 
       puts 'Invalid input, pick 4 pins'
@@ -63,7 +64,18 @@ class Game
         key_rest.delete_at(ind)
       end
     end
+    white_pins
   end
+
+  def show_guess_result(guess, red_pins, white_pins)
+    puts("#{colorize(guess)} | R#{red_pins} W#{white_pins}")
+  end
+
+  # def game_loop(key)
+  #   guess = gets_guess
+  #   red_pins, white_pins = full_guess(key, guess)
+
+  # end
 end
 
 # Class Game

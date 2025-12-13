@@ -6,12 +6,11 @@
     "configurations": [
     
         {
-            "type": "rdbg",
-            "name": "Debug current file with rdbg",
-            "request": "launch",
-            "script": "${file}",
-            "args": [],
-            "askParameters": true
+        "type": "rdbg",
+        "name": "Debug Mastermind",
+        "request": "launch",
+        "script": "${workspaceFolder}/bin/mastermind.rb",
+        "useTerminal":true
         },
         {
             "type": "rdbg",
